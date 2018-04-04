@@ -16,7 +16,7 @@
 package groovyx.javafx.factory
 
 import javafx.scene.chart.Axis
-import javafx.scene.chart.XYChartBuilder
+//import javafx.scene.chart.XYChartBuilder
 
 /**
  * A factory for creating ValueAxis and CategoryAxis objects for XYCharts.
@@ -32,14 +32,6 @@ class AxisFactory extends AbstractNodeFactory {
 
     @Override
     void setParent(FactoryBuilderSupport builder, Object parent, Object child) {
-        if (parent instanceof XYChartBuilder) {
-            if (!builder.context.containsKey(X_AXIS_PROPERTY)) {
-                builder.context[X_AXIS_PROPERTY] = true
-                parent.XAxis(child)
-            } else {
-                parent.YAxis(child)
-            }
-        }
+        parent.YAxis(child)
     }
-
 }

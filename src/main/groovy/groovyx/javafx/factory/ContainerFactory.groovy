@@ -16,7 +16,7 @@
 package groovyx.javafx.factory
 
 import javafx.scene.Node
-import javafx.scene.NodeBuilder
+//import javafx.scene.NodeBuilder
 import javafx.scene.Parent
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.GridPane

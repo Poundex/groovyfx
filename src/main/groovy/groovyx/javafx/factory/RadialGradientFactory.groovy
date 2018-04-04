@@ -16,7 +16,7 @@
 package groovyx.javafx.factory
 
 import javafx.scene.paint.RadialGradient
-import javafx.scene.paint.RadialGradientBuilder
+//import javafx.scene.paint.RadialGradientBuilder
 
 /**
  * @author Dean Iverson
@@ -42,15 +42,15 @@ class RadialGradientFactory extends AbstractGradientFactory {
         if (node instanceof RadialGradient)
             return false;
 
-        RadialGradientBuilder rgb = node as RadialGradientBuilder
+//        RadialGradientBuilder rgb = node as RadialGradientBuilder
 
         List<Double> center = attributes.remove("center") as List<Double>
-        if (center) {
-            rgb.centerX(center[0])
-            rgb.centerY(center[1])
-        }
+//        if (center) {
+//            rgb.centerX(center[0])
+//            rgb.centerY(center[1])
+//        }
 
-        handleStopsAttributeIfPresent(attributes, rgb)
+//        handleStopsAttributeIfPresent(attributes, rgb)
         return super.onHandleNodeAttributes(builder, node, attributes);
     }
 

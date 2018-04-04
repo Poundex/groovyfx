@@ -17,7 +17,7 @@ package groovyx.javafx.factory
 
 import javafx.scene.media.Media
 import javafx.scene.media.MediaPlayer
-import javafx.scene.media.MediaPlayerBuilder
+//import javafx.scene.media.MediaPlayerBuilder
 
 /**
  *
@@ -35,20 +35,22 @@ class MediaPlayerFactory extends AbstractFXBeanFactory{
         if (checkValue(name, value)) {
             return value
         }
-        def mediaPlayer = new MediaPlayerBuilder();
-        if(value != null) {
-            if(value instanceof Media)
-                mediaPlayer.media(value);
-            else
-                mediaPlayer.media(new Media(value.toString()))
-        }
+//        def mediaPlayer = new MediaPlayerBuilder();
+//        if(value != null) {
+//            if(value instanceof Media)
+//                mediaPlayer.media(value);
+//            else
+//                mediaPlayer.media(new Media(value.toString()))
+//        }
         // Need to this here so that we are sure to return a MediaPlayer, not the builder.
-        handleMediaPlayerAttributes(mediaPlayer, attributes);
-        return mediaPlayer.build();
+//        handleMediaPlayerAttributes(mediaPlayer, attributes);
+//        return mediaPlayer.build();
+	    throw new UnsupportedOperationException()
     }
     
     private void handleMediaPlayerAttributes(Object node, Map attributes) {
-
+	    throw new UnsupportedOperationException()
+/*
         MediaPlayerBuilder mpb = node as MediaPlayerBuilder
         
 
@@ -149,7 +151,7 @@ class MediaPlayerFactory extends AbstractFXBeanFactory{
                 mpb.media(attr);
             else
                 mpb.media(new Media(attr.toString()));
-        }
+        }*/
     }
     
 }
